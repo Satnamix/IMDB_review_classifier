@@ -10,6 +10,7 @@ word_index=imdb.get_word_index()
 reverse_word_index = {value:key for key, value in word_index.items()}
 
 model=load_model('simple_rnn_imdb.h5')
+model.compile()
 
 def preprocess_text(text):
     words=text.lower().split()
